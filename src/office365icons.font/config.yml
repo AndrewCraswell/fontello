@@ -1,0 +1,1958 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Alan Rodriguez
+#  homepage: http://o365icons.cloudapp.net:3000
+#  email: alanro@microsoft.com
+#  twitter: 
+#  dribble: 
+#  license: 
+#  license_url: 
+#
+#   css-prefix: ""             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: office365icons
+#
+#   fullname: Office 365 Icons
+#   familyname: Office 365 Icons
+#
+#   copyright: Copyright (C) 2014 by Microsoft
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-glyph1-name       # For generated CSS
+#     search: [e0, word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+
+################################################################################
+#
+
+
+meta:
+  author: Alan Rodriguez
+  homepage: http://o365icons.cloudapp.net:3000
+  twitter: https://twitter.com/Typicons/
+  github: https://github.com/stephenhutchings/typicons.font
+  license: CC BY-SA 3.0
+  license_url: http://creativecommons.org/licenses/by-sa/3.0/
+
+  css_prefix_text: "ms-Icon--"
+  columns: 4
+
+transform:
+  baseline: 0.5
+  rescale: 1.2
+  #offset: -0.44
+
+font:
+  version: "May 2014"
+
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: officeicons
+
+  fullname: Office 365 Icons
+  familyname: Office 365 Icons
+
+  copyright: (c) Microsoft 2014
+
+  ascent: 850
+  descent: -150
+  weight: Book
+
+
+glyphs:
+
+  -
+    css: space
+    code: 0x0020
+    uid: 38e30b82c16542f0b0493974927da671
+    search: [x0020, space]
+  -
+    css: circleEmpty
+    code: 0xe000
+    uid: 008a5743640b7a6d7fd45c2ce71db175
+    search: [e000, circle]
+  -
+    css: circleFill
+    code: 0xe001
+    uid: 71f4d69107eed0802eb1ba2a68532b40
+    search: [e001, circle, filled, pressed]
+  -
+    css: placeholder
+    code: 0xe002
+    uid: 79c5821bbfa100271a5e92386904c8c1
+    search: [e002, placeholder]
+  -
+    css: star
+    code: 0xe003
+    uid: dfef296c561124df07dab5df29db66ff
+    search: [e003, star, favorite]
+  -
+    css: plus
+    code: 0xe004
+    uid: 4eabcfa767e08ed0ff01151545e73e3c
+    search: [e004, plus, new, add, join]
+  -
+    css: minus
+    code: 0xe005
+    uid: 9b0811fbc66fffccc28929033717c5d7
+    search: [e005, minus, remove]
+  -
+    css: question
+    code: 0xe006
+    uid: 188b03b0cba20f556f9b184dd7976a08
+    search: [e006, question, mark, help, tentative]
+  -
+    css: exclamation
+    code: 0xe007
+    uid: a43ee6b4ee2c0b7d09fc83265a0f5287
+    search: [e007, exclamation, point, mark, urgent, bang]
+  -
+    css: person
+    code: 0xe008
+    uid: b2f23000171ee86cf46614619c336d54
+    search: [e008, person, doughboy, people, contact]
+  -
+    css: mail
+    code: 0xe009
+    uid: 8f8e1bd7e53b40979f7f858aacfa63e6
+    search: [e009, mail, message]
+  -
+    css: infoCircle
+    code: 0xe00a
+    uid: def7e79b2abb51c143dba038a344973e
+    search: [e00a, information, info]
+  -
+    css: alert
+    code: 0xe00b
+    uid: 5c0949e454b023bcbf192054102fca8c
+    search: [e00b, alert, exclamation, point]
+  -
+    css: xCircle
+    code: 0xe00c
+    uid: 92485cd8f11f96510fcc06ebd45726b9
+    search: [e00c, x, error]
+  -
+    css: mailOpen
+    code: 0xe00d
+    uid: 9313635756718168f7210036b1414166
+    search: [e00d, mail, read, mark]
+  -
+    css: people
+    code: 0xe00e
+    uid: 412d6a456d8d01cf977a2dd51edda2c7
+    search: [e00de, people, doughboy, doughboys]
+  -
+    css: bell
+    code: 0xe010
+    uid: d0850e75f3112149b3701518328e60f4
+    search: [e010, bell, alarm, reminder]
+  -
+    css: calendar
+    code: 0xe011
+    uid: 5b073ff063530445689fd474307931c9
+    search: [e011, calendar, month, view]
+  -
+    css: scheduling
+    code: 0xe012
+    uid: 43e3c520d41bc64a984697cf6afd295c
+    search: [e012, scheduling, calendar, event]
+  -
+    css: event
+    code: 0xe013
+    uid: 800a859fe80dda5439ffed1471e293ae
+    search: [e013, event, calendar]
+  -
+    css: folder
+    code: 0xe014
+    uid: c31c409b2a35a77c9b8b005f81a7e716
+    search: [e014, folder, mail]
+  -
+    css: documents
+    code: 0xe015
+    uid: 5cb434b66b3fa1942af8116d2851b438
+    search: [e015, documents]
+  -
+    css: onedrive
+    code: 0xe016
+    uid: c62bfcd7975b745fc5988bd544413751
+    search: [e016, onedrive, logo]
+  -
+    css: chat
+    code: 0xe017
+    uid: 4ca412450be144e8687acd9c8032365d
+    search: [e017, chat, im, instant, message]
+  -
+    css: sites
+    code: 0xe018
+    uid: 09ddc6f733cde142458ad898fef757d2
+    search: [e018, sites]
+  -
+    css: listBullets
+    code: 0xe019
+    uid: 378c37f915d91b52abf2f7eccb8d2fc3
+    search: [e019, list, bullets]
+  -
+    css: calendarWeek
+    code: 0xe01a
+    uid: 8c3e87e6fdce832c2f1bcad496b9f9ef
+    search: [e01a, week, view, calendar]
+  -
+    css: calendarWorkWeek
+    code: 0xe01b
+    uid: 27755431461ffe402cfc2d98beb9f175
+    search: [e01b, work, week, view, workweek, calendar]
+  -
+    css: calendarDay
+    code: 0xe01c
+    uid: c6339a00e2e6ab86e95e078f446d2eb1
+    search: [e01c, day, view, calendar]
+  -
+    css: folderMove
+    code: 0xe01d
+    uid: b73d2552a79bff9a069ec5b997513ffe
+    search: [e01d, move, folder]
+  -
+    css: panel
+    code: 0xe01e
+    uid: 3f1d7ca552fe31f3c61da98937f306d9
+    search: [e01e, panel]
+  -
+    css: popout
+    code: 0xe01f
+    uid: 8060ff70da33a3a27c964688c47ad8c3
+    search: [e01f, pop, out, window]
+  -
+    css: menu
+    code: 0xe020
+    uid: 92d8c2a7a52c25fc17af63f9ce919437
+    search: [e020, hamburger, menu]
+  -
+    css: home
+    code: 0xe021
+    uid: 7293fe4c88aa5744d4b66a25190919d5
+    search: [e021, home, house]
+  -
+    css: favorites
+    code: 0xe022
+    uid: 08b95161661f4cca4127ebed849f7010
+    search: [e022, favorite, favorites]
+  -
+    css: phone
+    code: 0xe023
+    uid: a6c31cd68998b72e9835692b542e8891
+    search: [e023, phone, call]
+  -
+    css: mailSend
+    code: 0xe024
+    uid: b9ed460fdc389495c8d0479d6970410f
+    search: [e024, send, mail]
+  -
+    css: save
+    code: 0xe025
+    uid: dcb361c70585ae031f45f47710e3cacb
+    search: [e025, save]
+  -
+    css: trash
+    code: 0xe026
+    uid: b626c898e9e543f7a93bd60d93aeda7b
+    search: [e026, delete, trash can]
+  -
+    css: pencil
+    code: 0xe027
+    uid: 9a7a2be76bc347a89d376bbaed9c1efa
+    search: [e027, edit, pencil]
+  -
+    css: flag
+    code: 0xe028
+    uid: 56b40003e49040cd826dfc803f72f54c
+    search: [e028, flag]
+  -
+    css: reply
+    code: 0xe029
+    uid: ff516577a39d47408aa79de815182205
+    search: [e029, reply]
+  -
+    css: miniatures
+    code: 0xe02a
+    uid: 758736a1158c4df98b981f04417bff1e
+    search: [e02a, miniatures, sexy frog, menu]
+  -
+    css: voicemail
+    code: 0xe02b
+    uid: 51c08bd8c245401787bdd8f979e55b38
+    search: [e02b, voice mail]
+  -
+    css: play
+    code: 0xe02c
+    uid: b56e02d90b084239b4c7a1ba87010119
+    search: [e02c, play]
+  -
+    css: pause
+    code: 0xe02d
+    uid: b1a647423aed489b824889cb69c8fdee
+    search: [e02d, pause]
+  -
+    css: onlineAdd
+    code: 0xe02e
+    uid: 61d1cbdbddf842a083b3fb6e159c6815
+    search: [e02e, add, online, meeting]
+  -
+    css: onlineJoin
+    code: 0xe02f
+    uid: 309cdcfc9d7744528f3c34d2ce0ef202
+    search: [e02f, join, online, meeting]
+  -
+    css: replyAll
+    code: 0xe030
+    uid: 2d0af374a3614bc184c0a49a22eec77d
+    search: [e030, reply all, reply]
+  -
+    css: attachment
+    code: 0xe031
+    uid: 62ca7fad69964b218372d15989d150cb
+    search: [e031, paper clip, attach, attachment]
+  -
+    css: drm
+    code: 0xe032
+    uid: 0dd68409f58b4ff3ae4a8eeb8ef22bf4
+    search: [e032, drm, data retention management]
+  -
+    css: pinDown
+    code: 0xe033
+    uid: 6b9e0dce24c441d294b00cd42cdd07f3
+    search: [e033, pin]
+  -
+    css: refresh
+    code: 0xe034
+    uid: 5f2c2c6f592047479a95fa255db1dcba
+    search: [e034, refresh, reload, sync, recurring]
+  -
+    css: gear
+    code: 0xe035
+    uid: 0312d800910a4a27930fcdd9b69f458a
+    search: [e035, gear, settings, options, configure]
+  -
+    css: smiley
+    code: 0xe036
+    uid: 3ad914ae4a39432c8405b6f37e0f52bb
+    search: [e036, smiley face, feedback, happy]
+  -
+    css: info
+    code: 0xe037
+    uid: cdd72d3138044bb887bbb2122f1de908
+    search: [e037, information, alert]
+  -
+    css: lock
+    code: 0xe038
+    uid: 2559905b2683468f8594f549b86380ca
+    search: [e038, lock, security, key, private, s/mime]
+  -
+    css: search
+    code: 0xe039
+    uid: 930e273b2b504b22b6e0d3f3f153ae14
+    search: [e039, search, zoom, enlarge, magnifying glass]
+  -
+    css: questionReverse
+    code: 0xe03a
+    uid: 8466fc6f062f431f8f494a2ff186df1a
+    search: [e03a, question, mark, reverse, rtl]
+  -
+    css: notRecurring
+    code: 0xe03b
+    uid: cf3cae203beb4c549407646c52ac5681
+    search: [e03b, not recurring event]
+  -
+    css: tasks
+    code: 0xe040
+    uid: 3a5caa06885b406287daee224ea3fb56
+    search: [e040, tasks, to do, check]
+  -
+    css: check
+    code: 0xe041
+    uid: 7d6aaaf50f154450aac4158a239f6b90
+    search: [e041, checkmark, approve, accept]
+  -
+    css: x
+    code: 0xe042
+    uid: 39ad05f96d624bcab5d928b04c41ae70
+    search: [e042, x, close, discard, remove, decline, delete]
+  -
+    css: thumbDown
+    code: 0xe043
+    uid: 5925531c1a684676bbac2518be15ec36
+    search: [e043, thumbs down, dislike, unlike]
+  -
+    css: thumbUp
+    code: 0xe044
+    uid: 7b550e806135440bab2f0bc10f924ae2
+    search: [e044, thumbs up, like]
+  -
+    css: ellipsis
+    code: 0xe045
+    uid: 5859fcfc01394686951ec19d20f747a6
+    search: [e045, ellipsis, affordance, dots, etc]
+  -
+    css: dot
+    code: 0xe046
+    uid: d29e66939dd548ba8f10055db22fb1f1
+    search: [e046, bullet, dot]
+  -
+    css: arrowUp
+    code: 0xe047
+    uid: 8b95ddf6563e4347adb1d3b19d729e0c
+    search: [e047, up arrow]
+  -
+    css: arrowDown
+    code: 0xe048
+    uid: e9e03d8ae4b74176b794fcfd8baef771
+    search: [e048, down arrow]
+  -
+    css: arrowLeft
+    code: 0xe049
+    uid: 248379845d11487fb14960ef70856750
+    search: [e049, left arrow, back]
+  -
+    css: arrowRight
+    code: 0xe04a
+    uid: d8e238c01b2c47d0bb7c90e7f815a846
+    search: [e04a, right arrow, forward]
+  -
+    css: download
+    code: 0xe04b
+    uid: 4d253fc7ea5f42b3b19d95741a958b38
+    search: [e04b, download, down arrow]
+  -
+    css: directions
+    code: 0xe04c
+    uid: 2b9c83625ead467c8cbed2f604d6faa5
+    search: [e04c, directions, navigate, turn]
+  -
+    css: microphone
+    code: 0xe04f
+    uid: a91c267c091d4e82af0e6af2526b3a02
+    search: [e04f, microphone, voice commands]
+  -
+    css: caretUp
+    code: 0xe051
+    uid: 41035c1a5a6c4e73afb75c3dc6658d4a
+    search: [e051]
+  -
+    css: caretDown
+    code: 0xe052
+    uid: d88f0cdf3719446ca8e7ac6857ef6521
+    search: [e052]
+  -
+    css: caretLeft
+    code: 0xe053
+    uid: b38bc2ee298d4b47aaf8259c3371f791
+    search: [e053]
+  -
+    css: caretRight
+    code: 0xe054
+    uid: 9a3c22d82c4a4d9ea875a259b25b31e6
+    search: [e054, collapsed]
+  -
+    css: officeThreshold
+    code: 0xe055
+    uid: d3510460f6c94e428bb5c05f2496c666
+    search: [e055, office logo, threshold]
+  -
+    css: office365
+    code: 0xe056
+    uid: 613212b0ab0a4bbebae1e14b10cbb848
+    search: [e056, office 365 logo, threshold]
+  -
+    css: office365Preview
+    code: 0xe057
+    uid: 927ec5fe9b2d4f32a0412378928d8579
+    search: [e057, office 365 preview logo, threshold]
+  -
+    css: caretUpLeft
+    code: 0xe05a
+    uid: 593fff090bbc4b4785d0063e1d2d880f
+    search: [e05a]
+  -
+    css: caretUpRight
+    code: 0xe05b
+    uid: ea782e44ebe04162a25cb3e847f90bd4
+    search: [e05b]
+  -
+    css: caretDownRight
+    code: 0xe05c
+    uid: 9642b2c665d6404a95848db672843844
+    search: [e05c, expanded]
+  -
+    css: caretDownLeft
+    code: 0xe05d
+    uid: d77482fb22bf4f38b5e947b4968d219b
+    search: [e05d]
+  -
+    css: apps
+    code: 0xe060
+    uid: 5f5bc49be4da42f39b9bc17de7c8b68e
+    search: [e060, apps]
+  -
+    css: officeStore
+    code: 0xe061
+    uid: 57075b6ceff346fdbc18ab0c4cee6401
+    search: [e061, office store, shopping bag]
+  -
+    css: outlook
+    code: 0xe062
+    uid: f76b1d7e459448078c9956696c5f63d1
+    search: [e062, outlook logo]
+  -
+    css: project
+    code: 0xe063
+    uid: 119b489254b845d39e9bf8d0a0eb0344
+    search: [e063, project logo]
+  -
+    css: yammer
+    code: 0xe064
+    uid: 3c89bfed8f24465283c3db06e0275a5f
+    search: [e064, yammer logo]
+  -
+    css: dynamicsCrm
+    code: 0xe065
+    uid: 0f597d2c1a36476ea0e4f316290f7bb8
+    search: [e065, dynamics crm logo]
+  -
+    css: lync
+    code: 0xe066
+    uid: 88f38aab75f14f2db67b51479934cde2
+    search: [e066, lync logo]
+  -
+    css: note
+    code: 0xe06a
+    uid: 782ae61ff5d3490a8821d98b11e61f74
+    search: [e06a, post, note]
+  -
+    css: noteReply
+    code: 0xe06b
+    uid: 1fa7cd7651604ae489218b080adf77a7
+    search: [e06b, replied post, replied note]
+  -
+    css: noteForward
+    code: 0xe06c
+    uid: b0105743091c48cbbdd2b1ef36c23636
+    search: [e06c, forwarded post, forwarded note]
+  -
+    css: key
+    code: 0xe06f
+    uid: cee6a2367419486ca0c3b87b26b442cb
+    search: [e06f, key, lock, security, privacy, s/mime]
+  -
+    css: tile
+    code: 0xe070
+    uid: 3fe343deebd548c3a3ea55eb523369c4
+    search: [e070, tile view, gallery, thumbnails]
+  -
+    css: taskRecurring
+    code: 0xe071
+    uid: e01b54964efe47238d66ff7613a6a080
+    search: [e071, recurring task, to do]
+  -
+    css: sharepoint
+    code: 0xe072
+    uid: daa69423d2f64706b00202272291a6fc
+    search: [e072, sharepoint logo]
+  -
+    css: starEmpty
+    code: 0xe073
+    uid: 2376568f1ba7450c94913a8a3bf53540
+    search: [e073, empty star, favorite]
+  -
+    css: upload
+    code: 0xe076
+    uid: 8f5158723d9047108a2d79c70d6cc32c
+    search: [e076, upload, arrow]
+  -
+    css: wrench
+    code: 0xe077
+    uid: 305c8f8392794be98f313a8dd62640a1
+    search: [e077, wrench, tools, setup, configure, settings]
+  -
+    css: share
+    code: 0xe078
+    uid: d6af1d69fc6b4aafa6a2f626506cb527
+    search: [e078, share]
+  -
+    css: documentReply
+    code: 0xe079
+    uid: e7efe1b729e14f0f971dc8379ff59702
+    search: [e079, reply, document]
+  -
+    css: documentForward
+    code: 0xe07a
+    uid: aa0f555a6451443fa42a0d2d56fa724c
+    search: [e07a, forward, document]
+  -
+    css: partner
+    code: 0xe080
+    uid: 58343926d7ef45dea152241854aa900f
+    search: [e080, partner, ribbon, doughboy]
+  -
+    css: admin
+    code: 0xe081
+    uid: be4512fdb3894acbb91a48fdc7fa7e47
+    search: [e081, admin, gear, wrench, tools, settings, options, set up]
+  -
+    css: microsoft
+    code: 0xe083
+    uid: 79941fd7f4584f3fa445c668b3f57156
+    search: [e083, microsoft, logo]
+  -
+    css: reactivate
+    code: 0xe084
+    uid: 8d9928af322a42b1b1458675d8d5ae1a
+    search: [e084, reactivate, reset, revert]
+  -
+    css: sort
+    code: 0xe085
+    uid: 5d18981cfa564e6ab9d2401739d6d9b8
+    search: [e085, sort, up, arrow, down]
+  -
+    css: personAdd
+    code: 0xe086
+    uid: f33b916f5d174eee8f115fcb7e202fe4
+    search: [e086, add, contact, person, people, member, doughboy]
+  -
+    css: chevronUp
+    code: 0xe087
+    uid: 125e3a08037e4b418409a69a259ed496
+    search: [e087, chevrons, up]
+  -
+    css: chevronDown
+    code: 0xe088
+    uid: 55ba06e782c14497ba03dcb2fc02168d
+    search: [e088, chevrons, down]
+  -
+    css: chevronLeft
+    code: 0xe089
+    uid: ab6af68365a244e8964edab21ce41472
+    search: [e089, chevrons, left]
+  -
+    css: chevronRight
+    code: 0xe08a
+    uid: 372bb5a04fcf4028b5971db2f03cfdda
+    search: [e08a, chevrons, right]
+  -
+    css: powerBi
+    code: 0xe08b
+    uid: 20075f1a74fc43ff8f0f7fad4efe6bde
+    search: [e08b, power, bi, logo]
+  -
+    css: peopleAdd
+    code: 0xe08c
+    uid: b97b8301492d47b2bc9e6feaba3d4584
+    search: [e08c, add, group, join, people, doughboys, members]
+  -
+    css: newsfeed
+    code: 0xe08d
+    uid: b1518166608b43ce9d071067457e1844
+    search: [e08d, newsfeed, newspaper]
+  -
+    css: notebook
+    code: 0xe08e
+    uid: 1e926159539c4073b1ba9b7d5451e6ba
+    search: [e08e, notebok]
+  -
+    css: link
+    code: 0xe08f
+    uid: f74bc9b1c4834e6eac5ac574953daefb
+    search: [e08f, link, url]
+  -
+    css: chevronsUp
+    code: 0xe090
+    uid: 07bad5aff8294cd6966e827966c984d4
+    search: [e090]
+  -
+    css: chevronsDown
+    code: 0xe091
+    uid: 0ffd401039754264a8b9c1ccfef9b226
+    search: [e091]
+  -
+    css: chevronsLeft
+    code: 0xe092
+    uid: 1833c11054fc4f3692829a253bff2748
+    search: [e092]
+  -
+    css: chevronsRight
+    code: 0xe093
+    uid: 8bbf0c6a91b348048c12764e6308a65a
+    search: [e093]
+  -
+    css: clutter
+    code: 0xe09a
+    uid: e1701f7542bf441b98e18c7197a24426
+    search: [e09a, clutter, sweep]
+  -
+    css: subscribe
+    code: 0xe09c
+    uid: 83dbf51422054ffd856d6b291bcfe9e1
+    search: [e09c, subscribe]
+  -
+    css: unsubscribe
+    code: 0xe09d
+    uid: a89a4f8b7f81408d9fb89de61813292b
+    search: [e09d, unsubscribe]
+  -
+    css: personRemove
+    code: 0xe09e
+    uid: 0f5651733b8a4b088c77956d54b798d9
+    search: [e09e, remove contact, person, doughboy, member]
+  -
+    css: receiptForward
+    code: 0xe0a0
+    uid: e8be51d8d32947a08baf24246dc2c2a2
+    search: [e0a0]
+  -
+    css: receiptReply
+    code: 0xe0a1
+    uid: a891702022ce42ebb8abced98fe788cf
+    search: [e0a1]
+  -
+    css: receiptCheck
+    code: 0xe0a2
+    uid: 7decd433915f49c0a6927bcd657baa66
+    search: [e0a2]
+  -
+    css: peopleRemove
+    code: 0xe0a3
+    uid: 7dc2d36749b94c868c821dcdd7692f25
+    search: [e0a3, remove group, leave, people, doughboys, members]
+  -
+    css: merge
+    code: 0xe0a4
+    uid: eefd8f0111b547edab452fec00175bac
+    search: [e0a4, merge, right arrow, left arrow]
+  -
+    css: split
+    code: 0xe0a5
+    uid: aa11b165b571456abe0420cf93e9811f
+    search: [e0a5, split, left arrow, right arrow]
+  -
+    css: eventCancel
+    code: 0xe0a6
+    uid: a450bae911ba4b3491e88084329cedb5
+    search: [e0a6, event cancelled, calendar]
+  -
+    css: eventShare
+    code: 0xe0a7
+    uid: 3113e222d35f492b9d5381f1b6c166cc
+    search: [e0a7, event forwarded, calendar]
+  -
+    css: today
+    code: 0xe0a9
+    uid: 38ec963336e142ceb554d653ca398ba8
+    search: [e0a9, today, calendar, event]
+  -
+    css: oofReply
+    code: 0xe0aa
+    uid: 52426ab653cd440199621f2420c4607b
+    search: [e0aa, out, of, office, oof, reply, door, left, arrow]
+  -
+    css: voicemailReply
+    code: 0xe0ac
+    uid: 513d326b91154451bb5b5938c3e16e49
+    search: [e0ac, voicemail, reply, left arrow]
+  -
+    css: voicemailForward
+    code: 0xe0ad
+    uid: 182726d3073f4201a6d8c7d47404c2a4
+    search: [e0ad, voicemail, forward, right, arrow]
+  -
+    css: ribbon
+    code: 0xe0af
+    uid: e3e4a89e40f14e7cb13bbbdb84efad60
+    search: [e0af, ribbon, award, partner]
+  -
+    css: contact
+    code: 0xe0b0
+    uid: 89bb74e71e364949a62cce9174e9fa5f
+    search: [e0b0, contact, card]
+  -
+    css: eye
+    code: 0xe0b1
+    uid: 5a70f2e205214ea5826e6a4a3cf7cc70
+    search: [e0b1, view, eye, watch]
+  -
+    css: glasses
+    code: 0xe0b2
+    uid: a3464ff18348468b99c7eb1a0a36abca
+    search: [e0b2, reading, mode, glasses]
+  -
+    css: gallatin
+    code: 0xe0b3
+    uid: 73645ef676cd48d1a6f58418c2116ac6
+    search: [e0b3, gallatin, logo]
+  -
+    css: access
+    code: 0xe0b4
+    uid: 97200126a5b1403e82fc0780df55f5ef
+    search: [e0b4, access, logo]
+  -
+    css: excel
+    code: 0xe0b5
+    uid: 83177f8cef7049df8db2767a50d18be1
+    search: [e0b5, excel, logo]
+  -
+    css: onenote
+    code: 0xe0b7
+    uid: 91074e9061254e7bafaa7b04ae28e9cf
+    search: [e0b7, onenote, logo]
+  -
+    css: powerpoint
+    code: 0xe0b8
+    uid: 130249f5c57644028e4dc95f016db6a5
+    search: [e0b8, powerpoint, logo]
+  -
+    css: word
+    code: 0xe0b9
+    uid: 02a5ceae0f704fb781d0ebe871c149f6
+    search: [e0b9, word, logo]
+  -
+    css: print
+    code: 0xe100
+    uid: 4f2750571f654e27b208f870b0efc05e
+    search: [e100, printer, print]
+  -
+    css: room
+    code: 0xe101
+    uid: 21e0f6c21d124ad4a5933ef46c8f236d
+    search: [e101, conference, room, meeting, door]
+  -
+    css: post
+    code: 0xe102
+    uid: 78dd44132ec642c6b1aa71663cdb08d4
+    search: [e102, post, note, pin]
+  -
+    css: toggle
+    code: 0xe103
+    uid: 4dc045f99e12472a8612a047139ee4c
+    search: [e103, toggle, panel]
+  -
+    css: touch
+    code: 0xe104
+    uid: 553974b0e59e475b8d66f8ff5ba90a5d
+    search: [e104, touch, mode, hand]
+  -
+    css: clock
+    code: 0xe105
+    uid: f987cfa7da58467291c33d03248b2ff1
+    search: [e105, clock, time]
+  -
+    css: fax
+    code: 0xe106
+    uid: 9d82888fff3244aebb1361f5697df1da
+    search: [e106, fax]
+  -
+    css: lightning
+    code: 0xe110
+    uid: f5dfd4c1844744afa76bbe8282158966
+    search: [e110, lightning bolt, wizard, setup]
+  -
+    css: dialpad
+    code: 0xe111
+    uid: f4fbd899a00b476fb2c560efceee141
+    search: [e111, dial pad, phone number]
+  -
+    css: phoneTransfer
+    code: 0xe112
+    uid: e3dd8d681ac04bb3a59c06d8ea2ac7af
+    search: [e112, phone transfer, arrows]
+  -
+    css: phoneAdd
+    code: 0xe113
+    uid: d0ffc019d4074b288cb7c5b04bf2344a
+    search: [e113, add phone number]
+  -
+    css: late
+    code: 0xe114
+    uid: fc804cd696bc48cf8f381150b4cc78d2
+    search: [e114, run, running late]
+  -
+    css: chatAdd
+    code: 0xe115
+    uid: 9ae9754bde994becbd263509b5d5055c
+    search: [e115, add chat]
+  -
+    css: conflict
+    code: 0xe116
+    uid: 78f071494a76457aaa110a2abb0a9b5b
+    search: [e116, conflict, exit full screen]
+  -
+    css: navigate
+    code: 0xe117
+    uid: ee483e2674964ea7a936169241ff4e49
+    search: [e117, navigation, directions]
+  -
+    css: delve
+    code: 0xe118
+    uid: fef336f35900484d98ce1114b78cd82c
+    search: [e118, pulse logo]
+  -
+    css: camera
+    code: 0xe119
+    uid: cb935b93508942ffb28981ef5c4aa843
+    search: [e119, camera, photo]
+  -
+    css: filter
+    code: 0xe11a
+    uid: eb6a6030693d481eb521456a73c6b6a8
+    search: [e11a, filter, sort]
+  -
+    css: fullscreen
+    code: 0xe11b
+    uid: c46ae2395a6b4890bfd36387da0a44bb
+    search: [e11b]
+  -
+    css: new
+    code: 0xe11c
+    uid: 88bc0e350e0490db0cae7061ea3d85b
+    search: [e11c, new feature]
+  -
+    css: mailEmpty
+    code: 0xe11d
+    uid: b2a3119ecb9f44038cec15c52f87bbac
+    search: [e11d, mail outline]
+  -
+    css: editBox
+    code: 0xe11e
+    uid: 27acb72665954e51918f31a8dff27e80
+    search: [e11e, edit box, task]
+  -
+    css: waffle
+    code: 0xe11f
+    uid: cdb2b842196d43b389688fa95889a053
+    search: [e11f, waffle, app launcher]
+  -
+    css: work
+    code: 0xe120
+    uid: 7cc5eb97156468785842e7e881b383b
+    search: [e120, work, building, office]
+  -
+    css: eventRecurring
+    code: 0xe121
+    uid: fc970aea4a214e83b5234a114c63ba20
+    search: [e121, recurring event]
+  -
+    css: cart
+    code: 0xe122
+    uid: 249945168e214fa3841814d67d1484f4
+    search: [e122, shopping cart, add to cart]
+  -
+    css: socialListening
+    code: 0xe123
+    uid: 655abda9c9e24715be5dac9f99cffd4
+    search: [e123]
+  -
+    css: mapMarker
+    code: 0xe124
+    uid: 835963945b024170badb95ef14cad03c
+    search: [e124]
+  -
+    css: org
+    code: 0xe125
+    uid: ed2a704b7d27417494bbe6679967951d
+    search: [e125]
+  -
+    css: adminA
+    code: 0xe130
+    uid: 16ec404473ff4f8ba244db9571780dd2
+    search: [e130]
+  -
+    css: adminC
+    code: 0xe131
+    uid: c51b2da8d79e4eb397fd5f756ee4d690
+    search: [e131]
+  -
+    css: adminD
+    code: 0xe132
+    uid: 769d5c2ed7a440da9dedd47c1b9b3648
+    search: [e132]
+  -
+    css: adminE
+    code: 0xe133
+    uid: c626c5d61c7140948bd7061d096fc980
+    search: [e133]
+  -
+    css: adminL
+    code: 0xe134
+    uid: c51d98de76d24ba39b1b31f00054f7da
+    search: [e134]
+  -
+    css: adminM
+    code: 0xe135
+    uid: 1f6a3ba483c240f7bc1b101fc081886f
+    search: [e135]
+  -
+    css: adminO
+    code: 0xe136
+    uid: e14cef0546364bcb9bbed6f38be8b873
+    search: [e136]
+  -
+    css: adminP
+    code: 0xe137
+    uid: 7c4d497f4e3e4a06a17b38750474e793
+    search: [e137]
+  -
+    css: adminS
+    code: 0xe138
+    uid: 71f48ff3dda747309f6e5a20bec1c1b3
+    search: [e138]
+  -
+    css: adminY
+    code: 0xe139
+    uid: cbc712c3a0694f3e99ee357ed2aa2b1a
+    search: [e139]
+  -
+    css: replyAlt
+    code: 0xe150
+    uid: b0234d942a6e40bda72545f4f0bfb8d1
+    search: [e150, reply]
+  -
+    css: replyAllAlt
+    code: 0xe152
+    uid: 98bded12c0864a8ebe4f3e92e9fc9281
+    search: [e152, reply all]
+  -
+    css: eventInfo
+    code: 0xe154
+    uid: a818dfb0950646ceb58839bdf7b2e1c4
+    search: [e154, event information, calendar]
+  -
+    css: group
+    code: 0xe155
+    uid: fbff2a3652c74ad89c5dec3d08aeb37b
+    search: [e155, group doughboy]
+  -
+    css: office
+    code: 0xe160
+    uid: 59939cea36154ad4aa5a2658456f42c5
+    search: [e160, office logo, threshold]
+  -
+    css: money
+    code: 0xe161
+    uid: ccc77158b1c040b6b377f6e40094b828
+    search: [e161, dollar, money, purchase]
+  -
+    css: graph
+    code: 0xe162
+    uid: 532012e83ef944468db3fd7fbdbb2721
+    search: [e162, graph, chart, service health]
+  -
+    css: noteEdit
+    code: 0xe163
+    uid: 07f98bb24f4e4eacb6fbbe5f935feee8
+    search: [e163, edit note, post, memo]
+  -
+    css: dashboard
+    code: 0xe164
+    uid: 3574338685b048db9bd6d1d1657c6548
+    search: [e164, dashboard]
+  -
+    css: mailEdit
+    code: 0xe165
+    uid: 5580051eb8aa43a0be2d2be2f40ae3cc
+    search: [e165, edit email address]
+  -
+    css: pinLeft
+    code: 0xe167
+    uid: 068c33a70ea646d79f0623303be232ad
+    search: [e167, pin left, unpin]
+  -
+    css: onedriveAdd
+    code: 0xe168
+    uid: 787152c397ae4e6c88e135ca341ed226
+    search: [e168, add to onedrive, cloud]
+  -
+    css: heart
+    code: 0xe16a
+    uid: a55fbca55a0e4f2a984f2434b886d4ad
+    search: [e16a, heart, like, love]
+  -
+    css: heartEmpty
+    code: 0xe16b
+    uid: 8c3ab0061ace4513a6ae402cb55791a0
+    search: [e16b, heart, unlike, dislike]
+  -
+    css: picture
+    code: 0xe16c
+    uid: 67591efc863244c69cc9a055a49d2c4a
+    search: [e16c, picture, image, photo]
+  -
+    css: cake
+    code: 0xe16d
+    uid: 77b0037fdf0b457582eebd8140dd0813
+    search: [e16d, birthday cake]
+  -
+    css: books
+    code: 0xe16e
+    uid: 6274094fb58c4676a30637483339baa9
+    search: [e16e, books, library]
+  -
+    css: chart
+    code: 0xe16f
+    uid: 561f3ab7f937490daf489ee49dfc84db
+    search: [e16f, chart, graph]
+  -
+    css: video
+    code: 0xe170
+    uid: 149f2f50b98f4f298a75fc6b4570ca48
+    search: [e170, video camera]
+  -
+    css: soccer
+    code: 0xe171
+    uid: 8e03233621540fbabf6278c9020c2d0
+    search: [e171, soccer ball, sports]
+  -
+    css: meal
+    code: 0xe172
+    uid: 146082b2588c412ca7e53cb31a55e405
+    search: [e172, meal, knife, fork, food]
+  -
+    css: balloon
+    code: 0xe173
+    uid: 2dee44bfa81f46d2b2919732357e8f32
+    search: [e173, balloon, party]
+  -
+    css: cat
+    code: 0xe174
+    uid: 9d32e1b5d024109931689946362ea3b
+    search: [e174, cat]
+  -
+    css: dog
+    code: 0xe175
+    uid: 22c2292ed2ed439db4f5101486b08898
+    search: [e175, dog]
+  -
+    css: bag
+    code: 0xe176
+    uid: 45e25d41925f4a558bdb88e4b2274b87
+    search: [e176, shopping bag]
+  -
+    css: music
+    code: 0xe177
+    uid: 856748a15e474fc0bb4b3237203b3d3e
+    search: [e177, music notes]
+  -
+    css: stopwatch
+    code: 0xe178
+    uid: 03a408a0a8564f32a5b0a6a285b831e7
+    search: [e178, stopwatch, time]
+  -
+    css: coffee
+    code: 0xe179
+    uid: 9f0fe86028dd4915aedee3cf0feb5a9e
+    search: [e179, coffee, tea]
+  -
+    css: briefcase
+    code: 0xe17a
+    uid: 64ce5916cc2c4a9693befbba22e5b624
+    search: [e17a, briefcase]
+  -
+    css: pill
+    code: 0xe17b
+    uid: 76914494086e49a0b8e83b553991a0a1
+    search: [e17b, pill, medicine]
+  -
+    css: trophy
+    code: 0xe17c
+    uid: 46026800544b42c2a3dafc0480b5907e
+    search: [e17c, trophy, award, achievement]
+  -
+    css: firstAid
+    code: 0xe17d
+    uid: 077c4c0d707643eb0944d0c3bcc3be1
+    search: [e17d, first aid kit]
+  -
+    css: plane
+    code: 0xe17e
+    uid: d16289bce6204cdd8628c214bf0eae9
+    search: [e17e, plane, travel]
+  -
+    css: page
+    code: 0xe17f
+    uid: 10339370862542a28caf428b10745861
+    search: [e17f, document]
+  -
+    css: car
+    code: 0xe180
+    uid: bfedf7da625b4e58a2a847892ea14fbd
+    search: [e180, car, automobile]
+  -
+    css: dogAlt
+    code: 0xe181
+    uid: 40e4be116657465c96edadf79bd09bac
+    search: [e181, dog]
+  -
+    css: document
+    code: 0xe182
+    uid: 92291780f8f94c8f8325a926b270b33b
+    search: [e182, document, file]
+  -
+    css: metadata
+    code: 0xe183
+    uid: bc0e7b4b7cc480d897be2217b7a74a5
+    search: [e183, metadata]
+  -
+    css: pointItem
+    code: 0xe184
+    uid: 6b04506acdda42daafe4ddaea1c2284b
+    search: [e184, point, item]
+  -
+    css: text
+    code: 0xe185
+    uid: c450b6fd068847f9a853a6a1f9933b6f
+    search: [e185, text, font]
+  -
+    css: fieldText
+    code: 0xe186
+    uid: 7851fa1d1dd449e8571c3b247070d13
+    search: [e186, text, field, box]
+  -
+    css: fieldNumber
+    code: 0xe187
+    uid: 30742cb8e53a45dfadff17ec7e70a052
+    search: [e187, number, field, box, numerical]
+  -
+    css: dropdown
+    code: 0xe188
+    uid: fd8680fd96754affba7e4368547200b2
+    search: [e188, dropdown, menu]
+  -
+    css: radioButton
+    code: 0xe189
+    uid: 7a0f068f36014cc2af1614f18723d447
+    search: [e189, radio, button]
+  -
+    css: checkbox
+    code: 0xe18a
+    uid: ff023c2ce85847d191550b352d11c8b1
+    search: [e18a, checkbox]
+  -
+    css: story
+    code: 0xe18b
+    uid: e90ee9fdc0a24d038e95ede129e93dc2
+    search: [e18b, story, item]
+  -
+    css: bold
+    code: 0xe18c
+    uid: 391b75f6811246cf9f79baca2834072f
+    search: [e18c, bold, emphasis]
+  -
+    css: italic
+    code: 0xe18d
+    uid: aa42648cb7f24a39ab89a5f5ce68be60
+    search: [e18d, italic, italics, italicize]
+  -
+    css: underline
+    code: 0xe18e
+    uid: 8775f5498c424c59a9999f684f09b579
+    search: [e18e, underline]
+  -
+    css: quote
+    code: 0xe18f
+    uid: fa4e25a3964c4032839e42adb651fca3
+    search: [e18f, pull, quote]
+  -
+    css: styleRemove
+    code: 0xe190
+    uid: 81711d96d25b47d2a9cef3d8210b81e
+    search: [e190, remove, style]
+  -
+    css: pictureAdd
+    code: 0xe191
+    uid: c6ab3ceab81a4cbdaa7c259c03a0f1ce
+    search: [e191, add, photo, image]
+  -
+    css: pictureRemove
+    code: 0xe192
+    uid: 89c7b4f637f343daaf30e6e27ccc2371
+    search: [e192, remove, photo, image]
+  -
+    css: desktop
+    code: 0xe193
+    uid: 70da1e7b2c9b4fa5bbae3e9479b2a8d
+    search: [e193, desktop, pc, laptop]
+  -
+    css: tablet
+    code: 0xe194
+    uid: 53a1350d9efe4695bf328d204b3260aa
+    search: [e194, tablet, ipad, surface, landscape]
+  -
+    css: mobile
+    code: 0xe195
+    uid: 69b29706047349449ec75ccfe43b4675
+    search: [e195, mobile, phone, cellphone, cell, cellular]
+  -
+    css: table	
+    code: 0xe196
+    uid: c3fe02f4db44e6c8c12ad95bd175394
+    search: [e196, table]
+  -
+    css: hide
+    code: 0xe197
+    uid: 316d41f183c6463c818d0eb9f43467c2
+    search: [e197, hide, hidden, view, eye]
+  -
+    css: shield
+    code: 0xe198
+    uid: a7b349229de14ffbbde91d47678dff33
+    search: [e198, shield, protect]
+  -
+    css: skype
+    code: 0xe199
+    uid: cab6d0fa99a14a629845cc40fd249d10
+    search: [e199, skype, logo, chat, im]
+  -
+    css: header
+    code: 0xe19a
+    uid: 8981afb16db440cd86118a8fd34669a0
+    search: [e19a, header, h1]
+  -
+    css: paint
+    code: 0xe19b
+    uid: 84fd4cfdc129482ca3d3509a297319b9
+    search: [e19b, paint, brush, color, customize, custom]
+  -
+    css: support
+    code: 0xe19c
+    uid: 171c780c5e824cd4aa4f5e9e745bc995
+    search: [e19c, support, help, phone]
+  -
+    css: settings
+    code: 0xe19d
+    uid: e1302de749ad45d3b3c1fcc1a57a6bf4
+    search: [e19d, settings, sliders]
+  -
+    css: creditCard
+    code: 0xe19e
+    uid: ae995311cb9c49f5990f8fe470f12a7e
+    search: [e19e, credit, card, payment, purchase, billing]
+  -
+    css: reload
+    code: 0xe19f
+    uid: 43e4437b38a149e7b922f1833708f9f0
+    search: [e19f, reload, reset, repeat]
+  -
+    css: peopleSecurity
+    code: 0xe200
+    uid: 243ca9feda744b7b8e116ba1d907f8d8
+    search: [e200, people, security, group, lock, secure]
+  -
+    css: visio
+    code: 0xe201
+    uid: aa42b86280064d3b846069bacac0a844
+    search: [e201, visio, logo]
+  -
+    css: officeVideo
+    code: 0xe202
+    uid: 16d8bebcc2494ce1ac3e56260f0da26c
+    search: [e202, office, video, logo]
+  -
+    css: fieldTextBox
+    code: 0xe203
+    uid: 6ab09393f29e4b33b7246230a2f0fc93
+    search: [e203, field, toolbox, text, box, mutliple, line]
+  -
+    css: multiChoice
+    code: 0xe204
+    uid: 4251eb1321bb41bfb57b9a92a4204a1a
+    search: [e204, field, toolbox, multiple, choice, select]
+  -
+    css: fieldMail
+    code: 0xe205
+    uid: 8d0e4c880a1842be9c04ed49f6e799a3
+    search: [e205, field, toolbox, mail, email]
+  -
+    css: contactForm
+    code: 0xe206
+    uid: a93a0615d2d6431abbd13c8543f35764
+    search: [e206, toolbox, contact, form, mail, email, letter]
+  -
+    css: circleHalfFilled
+    code: 0xe207
+    uid: e2f0a7766a264e63bca61bdc14927c38
+    search: [e207, circle, half, filled, progress]
+  -
+    css: documentPDF
+    code: 0xe208
+    uid: d6b10412b4ba4815900c5785e8268e5f
+    search: [e208, document, pdf, file]
+  -
+    css: bookmark
+    code: 0xe209
+    uid: b5bada0278314c5ab8f9e5ff4c902bdd
+    search: [e209, book, mark]
+  -
+    css: parature
+    code: 0xe20a
+    uid: d14372b23796454eb4902e289d147dc9
+    search: [e20a, parature, logo]
+  -
+    css: circleUnfilled
+    code: 0xe20b
+    uid: 9c99453427ca41e29b9ecb56ea32f0e8
+    search: [e20b, circle, empty, unfilled, progress]
+  -
+    css: circleFilled
+    code: 0xe20c
+    uid: 92aceeb47de84683bf9f510a67096ac0
+    search: [e20c, circle, filled, progress]
+  -
+    css: aad
+    code: 0xe20d
+    uid: 64aeb75531c34d65bb1dc7d07cc1454c
+    search: [e20d, aad, logo]
+  -
+    css: textBox
+    code: 0xe20e
+    uid: b912aa09dffd475e81e252cf2e16d8f3
+    search: [e20e, text, box, toolbox]
+  -
+    css: drop
+    code: 0xe20f
+    uid: f047d3ab3fdc4f32a7565f774fa519c5
+    search: [e20f, drop, weather, water, rain, humidity]
+  -
+    css: sun
+    code: 0xe210
+    uid: aeadca89564c49388ca4fb84c7dc9b48
+    search: [e210, sun, weather]
+  -
+    css: lifesaver
+    code: 0xe211
+    uid: 0de69dcc079e49d69e422d464ed915e2
+    search: [e211, service, request, support, ticket, open]
+  -
+    css: lifesaverLock
+    code: 0xe212
+    uid: f60003065edd48288847ef8c3c3baf92
+    search: [e212, service, request, support, ticket, closed, lock]
+  -
+    css: mailUnread
+    code: 0xe213
+    uid: 67ca7787a7244337b1478d93677c59ad
+    search: [e213, mail, envelope, unread]
+  -
+    css: mailRead
+    code: 0xe214
+    uid: bb481fe6fe1e4508a20eda170be4d1b2
+    search: [e214, mail, envelope, read]
+  -
+    css: inboxCheck
+    code: 0xe215
+    uid: 7ec36b0efa214af38c6d858f22c37b15
+    search: [e215, inbox, check, not, clutter]
+  -
+    css: folderSearch
+    code: 0xe216
+    uid: 31982ac34bd349dabf98bd14cf7d0093
+    search: [e216, folder, search, magnifying, glass]
+  -
+    css: collapse
+    code: 0xe217
+    uid: 9a42db4d61d14699b91b6aa6321bf37a
+    search: [e217, collapse, all]
+  -
+    css: expand
+    code: 0xe218
+    uid: 239e53c7319345249a6313bdb69a3be1
+    search: [e218, expand, all]
+  -
+    css: ascending
+    code: 0xe219
+    uid: 23b63241c8fc44ffab5fbb7dc159b001
+    search: [e219, asending, sort]
+  -
+    css: descending
+    code: 0xe21a
+    uid: b7c9e40696f04ce98f74d184e3b6c110
+    search: [e21a, descending, sort]
+  -
+    css: filterClear
+    code: 0xe21b
+    uid: 17f15f50e0b6474ba7ec3476eeb2bddf
+    search: [e21b, filter, clear, x]
+  -
+    css: checkboxEmpty
+    code: 0xe21c
+    uid: 010271815cb743a7a20b35aafdeb67c5
+    search: [e21c, checkbox, empty, unchecked, square]
+  -
+    css: checkboxMixed
+    code: 0xe21d
+    uid: 92f3aed2a7cf404bbcfe384a7777126b
+    search: [e21d, checkbox, mixed, state]
+  -
+    css: boards
+    code: 0xe21e
+    uid: 5541ded1bfa34790b0abff64711d881d
+    search: [e21e, boards, pulse]
+  -
+    css: checkboxCheck
+    code: 0xe21f
+    uid: 912a0e7697a945fcafc98cc706d3ba37
+    search: [e21f, checkbox, check]
+  -
+    css: frowny
+    code: 0xe220
+    uid: 40a36b0e940749a6a99ceb2029003c46
+    search: [e220, frowny, face, sad]
+  -
+    css: lightBulb
+    code: 0xe221
+    uid: f96a3ef47845414c97cf9f3edc0fb31e
+    search: [e221, light, bulb, idea, tip]
+  -
+    css: globe
+    code: 0xe222
+    uid: cda95bd53f7f4d8e990d7c40b5b9fb94
+    search: [e222, globe, world, internet, online]
+  -
+    css: deviceWipe
+    code: 0xe223
+    uid: 448940a4759e4a3bb5279bb07c1123b3
+    search: [e223, device, wipe, mdm, erase]
+  -
+    css: exchange
+    code: 0xe224
+    uid: ef1fb6fa404b46eabf2f088c6970ab5f
+    search: [e224, exchange, logo]
+  -
+    css: bing
+    code: 0xe225
+    uid: 48fb2eeddd654c74b34c2d407b5b9f71
+    search: [e225, bing, logo]
+  -
+    css: listCheck
+    code: 0xe226
+    uid: cb094ac7619b4f0a8d0a83638ca815bd
+    search: [e226, list, check, tasks]
+  -
+    css: listGroup
+    code: 0xe227
+    uid: e5aea79efa26445b830a8d56e7af673b
+    search: [e227, list, group, by]
+  -
+    css: timeline
+    code: 0xe228
+    uid: 06ad93956e4349adab90fd8bc49a1e0d
+    search: [e228, timeline, marker]
+  -
+    css: fontIncrease
+    code: 0xe229
+    uid: 0cf570e0d0cd4da5a7be4deb7383d627
+    search: [e229, font, size, increase]
+  -
+    css: fontDecrease
+    code: 0xe22a
+    uid: 752975bb07f54a4d9e44668803f16e9a
+    search: [e22a, font, size, decrease]
+  -
+    css: fontColor
+    code: 0xe22b
+    uid: 9081678f08794c38a3b2a8d4ce5230bd
+    search: [e22b, font, color]
+  -
+    css: mailCheck
+    code: 0xe22c
+    uid: ec5b791501df4004addd9147149a95c9
+    search: [e22c, mail, envelope, check, mark, not, clutter]
+  -
+    css: mailDown
+    code: 0xe22d
+    uid: 4e475ac1b4504abcb5778135f05f2f1a
+    search: [e22d, mail, envelope, down, arrow, mark, clutter]
+  -
+    css: listCheckbox
+    code: 0xe22e
+    uid: 0037c0b7b80747f9b0e00e9673e1aa7e
+    search: [e22e, list, checkbox]
+  -
+    css: sunAdd
+    code: 0xe22f
+    uid: 01e543520055424bbacb7ddca73914d2
+    search: [e22f, sun, weather, add, plus]
+  -
+    css: sunQuestion
+    code: 0xe230
+    uid: 8d7c3a5ed31c46e8bf916f12717b70af
+    search: [e230, sun, question, mark, weather, error]
+  -
+    css: chevronThinUp
+    code: 0xe231
+    uid: 48666e9b8afc4c09a5df961c635a470b
+    search: [e231, chevron, thin, up]
+  -
+    css: chevronThinDown
+    code: 0xe232
+    uid: e3e9ed0e67a543819545e97f8df0d2cc
+    search: [e232, chevron, thin, down]
+  -
+    css: chevronThinLeft
+    code: 0xe233
+    uid: 1c90e7ca777843fcab9b94eb4860f44e
+    search: [e233, chevron, thin, left]
+  -
+    css: chevronThinRight
+    code: 0xe234
+    uid: 39711b4660ab4cdb94c719ad68deab3a
+    search: [e234, chevron, thin, right]
+  -
+    css: chevronThickUp
+    code: 0xe235
+    uid: 89aff4aa325549088cd086f902c0a189
+    search: [e235, chevron, thick, up]
+  -
+    css: chevronThickDown
+    code: 0xe236
+    uid: d240a0d45a47430ea193b513d9671dcb
+    search: [e236, chevron, thick, down]
+  -
+    css: chevronThickLeft
+    code: 0xe237
+    uid: 9a16299928c8485098c32054d0164ee0
+    search: [e237, chevron, thick, left]
+  -
+    css: chevronThickRight
+    code: 0xe238
+    uid: 7897f5aa18254bf5abbf9afcde20bb75
+    search: [e238, chevron, thick, right]
+  -
+    css: linkRemove
+    code: 0xe239
+    uid: 804b0233e52449c8bfb5064132df09ff
+    search: [e239, link, remove, delete, break]
+  -
+    css: alchemy
+    code: 0xe23a
+    uid: f9e086cc6a604f17860888458d97d3ea
+    search: [e23a, alchemy, logo]
+  -
+    css: alertOutline
+    code: 0xe23b
+    uid: ef375b1640374f1ab015c8c6c3186cbd
+    search: [e23b, alert, exclamation, point, warning, caution]
+  -
+    css: documentLandscape
+    code: 0xe23c
+    uid: fad3f1c3acb74156a55e99dbbef261ba
+    search: [e23c, document, landscape, charm, calendar]
+  -
+    css: documentAdd
+    code: 0xe23d
+    uid: f64c5f1fba4f4a549ed4e94974eb078d
+    search: [e23d, document, add, new]
+  -
+    css: toggleMiddle
+    code: 0xe23e
+    uid: 5865fd6e69cf404cb90791c91bd4098f
+    search: [e23e, toggle, middle, center]
+  -
+    css: embed
+    code: 0xe23f
+    uid: a50f2efbf6fd42e090fe9de0f711c83a
+    search: [e23f, embed, code, brackets]
+  -
+    css: listNumbered
+    code: 0xe240
+    uid: b0f69dbdc92d4670b87431154ef339cc
+    search: [e240, list, numbers, numbered]
+  -
+    css: msn
+    code: 0xe241
+    uid: 3374b1c07fd6440da94449ba39c2bfd6
+    search: [e241, logo, butterfly]
+  -
+    css: peopleCheck
+    code: 0xe242
+    uid: 116627f7c60f4083a485c0f4f3002c5b
+    search: [e242, people, doughboys, check]
+  -
+    css: caretUpOutline
+    code: 0xe243
+    uid: 4acf9474759c4de5a831e5fd8807c311
+    search: [e243, caret, up, outline, stroke]
+  -
+    css: caretDownOutline
+    code: 0xe244
+    uid: 858df514ece14646baa463edeaf87653
+    search: [e244, caret, down, outline, stroke]
+  -
+    css: caretLeftOutline
+    code: 0xe245
+    uid: b5dd5efe173a421d9c14a0efbf633b31
+    search: [e245, caret, left, outline, stroke]
+  -
+    css: caretRightOutline
+    code: 0xe246
+    uid: 610e8c76b5e34812a00d586618d33fb6
+    search: [e246, caret, right, outline, stroke]
+  -
+    css: sway
+    code: 0xe247
+    uid: cb6d61d661cf4772b7d1a11a8b69f36a
+    search: [e247, sway, logo, threshold]
+  -
+    css: mailSync
+    code: 0xe248
+    uid: 6684b72572fc437fa2d6bf6e241df8fa
+    search: [e248, mail, sync, syncing]
+  -
+    css: mailError
+    code: 0xe249
+    uid: a458e061a6184916ad6da16a04c10466
+    search: [e249, mail, error, warning, caution]
+  -
+    css: mailPause
+    code: 0xe24a
+    uid: 78d41e7f50b84b488a4d6a039b45f513
+    search: [e24a, mail, pause, suspended]
+  -
+    css: peopleSync
+    code: 0xe24b
+    uid: 6d6862f1161141d097bd40dea407aef3
+    search: [e24b, people, contacts, sync, syncing]
+  -
+    css: peopleError
+    code: 0xe24c
+    uid: 91cb590b574b4a1cb5e01940128356ff
+    search: [e24c, people, contatcs, error, warning, caution]
+  -
+    css: peoplePause
+    code: 0xe24d
+    uid: a5d5b8cfa7ab424ea85e0057a7bd06d9
+    search: [e24d, people, contacts, pause, suspended]
+  -
+    css: circleBall
+    code: 0xe24e
+    uid: e9f6d02fe14e4676a6efec7438a0afff
+    search: [e24e, ball, soccer, football, sports]
+  -
+    css: circleBalloons
+    code: 0xe24f
+    uid: e2ed0a7977e84012be734cb4249122c4
+    search: [e24f, balloon, balloons, party, celebration]
+  -
+    css: circleCar
+    code: 0xe250
+    uid: aac738c29e7a48b395c5f380d87e6afb
+    search: [e250, car, automobile, vehicle]
+  -
+    css: circleCat
+    code: 0xe251
+    uid: 681ce33e463848968ce284bbee91912f
+    search: [e251, cat, kitty]
+  -
+    css: circleCoffee
+    code: 0xe252
+    uid: edbd0459cdcf4fdeb83858d795cc10e5
+    search: [e252, coffee, tea]
+  -
+    css: circleDog
+    code: 0xe253
+    uid: aae78e0ae73e47a991036cda1943c342
+    search: [e253, dog, puppy, doggy]
+  -
+    css: circleLightning
+    code: 0xe254
+    uid: 91071ba5c64540bd8832a7f40697485e
+    search: [e254, lightning, bolt]
+  -
+    css: circlePill
+    code: 0xe255
+    uid: 5163ed623ea04773803c358c73524320
+    search: [e255, pill, medicine, drugs, drug]
+  -
+    css: circlePlane
+    code: 0xe256
+    uid: 9de7527920d9470c9a05ec488cf229dc
+    search: [e256, plane, airplane, jet]
+  -
+    css: circlePoodle
+    code: 0xe257
+    uid: 2471c1885a3b49e8af000ce31bf1865e
+    search: [e257, poodle, dog, puppy]
+  -
+    css: skypeForBusiness
+    code: 0xe258
+    uid: ea24adbba1ba421483e2f28e2e06132b
+    search: [e258, skype, business, logo]
+  -
+    css: checkPeople
+    code: 0xe259
+    uid: 5967947f419e439fa7a135ae29ccaf85
+    search: [e259, check, people, person, group, planner, office365]
+  -
+    css: documentSearch
+    code: 0xe25a
+    uid: 26b0584903cd47e2adea5f7835b1568b
+    search: [e25a, document, search, magnifying, glass, view]
+  -
+    css: dynamicsMarketing
+    code: 0xe25b
+    uid: 875dc521d58a4c028f99d9e6ec8a14ec
+    search: [e25b, dynamics, crm, marketing, logo]
+  -
+    css: sortLines
+    code: 0xe25c
+    uid: 4a692386990e4915ad2080c1572839bc
+    search: [e25c, sort, lines, arrow, descending, ascending]
+  -
+    css: calendarPublic
+    code: 0xe25d
+    uid: 273b67ff0d0f4646b0d1ccb98c8c6a2c
+    search: [e25d, calendar, event, public]
+  -
+    css: contactPublic
+    code: 0xe25e
+    uid: c053ae17bba248449bb90953a988a25b
+    search: [e25e, contact, public]
+  -
+    css: classNotebook
+    code: 0xe25f
+    uid: 41bb8ea49aae47f09753f6cacf2f66f5
+    search: [e25f, class, notebook, onenote, logo]
+  -
+    css: triangleUp
+    code: 0xe260
+    uid: ea17b509bc144fec8fcfc6e51514eed4
+    search: [e260, triangle, vote, direction, caret, up]
+  -
+    css: triangleRight
+    code: 0xe261
+    uid: be06f6fdc4ba4225a19649d4d4d11638
+    search: [e261, triangle, vote, direction, caret, right]
+  -
+    css: triangleDown
+    code: 0xe262
+    uid: 460aa8c4551a486c8f39bd7faf7173d9
+    search: [e262, triangle, vote, direction, caret, down]
+  -
+    css: triangleLeft
+    code: 0xe263
+    uid: 1915c41b7fbe49e59b830dbf34bd4987
+    search: [e263, triangle, vote, direction, caret, left]
+  -
+    css: triangleEmptyUp
+    code: 0xe264
+    uid: 62b82c21d65943d4a60e149cd54d0a48
+    search: [e264, triangle, vote, direction, caret, up]
+  -
+    css: triangleEmptyRight
+    code: 0xe265
+    uid: 887b05ce2e2842cd964a98c57c347b85
+    search: [e265, triangle, vote, direction, caret, right]
+  -
+    css: triangleEmptyDown
+    code: 0xe266
+    uid: 7c9f258f58594cbaa9092093203aa626
+    search: [e266, triangle, vote, direction, caret, down]
+  -
+    css: triangleEmptyLeft
+    code: 0xe267
+    uid: 82c92f3ee05f4f11aae3ccc89f6bb63a
+    search: [e267, triangle, vote, direction, caret, left]
+  -
+    css: filePDF
+    code: 0xe268
+    uid: b360894692e54b20a298141e6227d1fd
+    search: [e268, file, filetype, type, pdf]
+  -
+    css: fileWord
+    code: 0xe269
+    uid: 5460f3c5fefd4b73900010501a364024
+    search: [e269, file, filetype, type, word, doc, docx]
+  -
+    css: filePowerPoint
+    code: 0xe26a
+    uid: 6888c28f5df64f53996676467172a893
+    search: [e26a, file, filetype, type, powerpoint, ppt, pptx]
+  -
+    css: fileExcel
+    code: 0xe26b
+    uid: def8eff6726340ef91ba288d6a67b580
+    search: [e26b, file, filetype, type, excel, xls, xlsx]
+  -
+    css: fileImage
+    code: 0xe26c
+    uid: 4102fda4169841fd8ca45eddedec847b
+    search: [e26c, file, filetype, type, image, picture, photo]
+  -
+    css: fileDocument
+    code: 0xe26d
+    uid: 5ebe4efeada548ed88a27027c2c51579
+    search: [e26d, file, filetype, type, document, generic]
+  -
+    css: listGroup2
+    code: 0xe26e
+    uid: 7c31bb2d55e74764b4b1fad6afeadadf
+    search: [e26e, group, list]
+  -
+    css: copy
+    code: 0xe26f
+    uid: c333e908880e40bf8a61ec77fff7a3a5
+    search: [e26f, copy, document, duplicate]
+  -
+    css: creditCardOutline
+    code: 0xe270
+    uid: ef913fb5574e4de9b3584cb05fa8f3cf
+    search: [e270, credit, card, billing, money]
+  -
+    css: officeAssistant
+    code: 0xe271
+    uid: 2df50c0802d2458fa574ef563f7e5b8f
+    search: [e271, office, assistant]
+
+
