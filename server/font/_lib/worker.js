@@ -204,11 +204,12 @@ module.exports = function fontWorker(taskInfo, callback) {
       }
 
       execFile(TTFAUTOHINT_BIN, [
-        '--no-info',
-        '--windows-compatibility',
-        '--symbol',
-        files.ttfUnhinted,
-        files.ttf
+        '--latin-fallback'
+      , '--no-info'
+      , '--windows-compatibility'
+      , '--symbol'
+      , files.ttfUnhinted
+      , files.ttf
       ], { cwd: taskInfo.cwdDir }, function (err, stdout, stderr) {
         if (err) {
           next({

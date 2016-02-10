@@ -1,6 +1,7 @@
-5.3.0 / WIP
+5.2.1 / WIP
 ------------------
 
+<<<<<<< HEAD
 - Added font smoothing as in TWBS
 - Make demo icons "copypasteable".
 - Fixed custom icons size in UI if adfanced settings changed.
@@ -8,6 +9,10 @@
 - Improved SVG import - transforms & paths merge are applyed automatically.
 - Fixed import of empty glyphs (space).
 - Use ttfautohint v1.1.
+=======
+- Improved SVG import - transforms & paths merge are applyed automatically.
+- Fixed import of empty glyphs (space)
+>>>>>>> parent of 4d47e13... Use ttfautohint v1.1, closes #319
 
 
 5.2.0 / 2014.06.22
