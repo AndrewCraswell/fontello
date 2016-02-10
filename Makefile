@@ -6,20 +6,7 @@ PATH := $(PATH):./support/font-builder/support/ttfautohint/frontend
 PATH := $(PATH):./support/font-builder/bin
 
 
-FONTS         += fontelico.font
-FONTS         += awesome-uni.font
-FONTS         += entypo
-FONTS         += typicons.font
-FONTS         += iconic-uni.font
-FONTS         += modernpics.font
-FONTS         += meteocons.font
-FONTS         += mfglabs.font
-FONTS         += maki.font
-FONTS         += zocial.font
-FONTS         += brandico.font
-FONTS         += elusive.font
-FONTS         += linecons.font
-FONTS         += websymbols-uni.font
+FONTS         += office365icons.font
 FONT_CONFIGS   = $(foreach f,$(FONTS),src/${f}/config.yml)
 
 FONT_DIR 			= ./assets/embedded_fonts

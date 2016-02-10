@@ -500,11 +500,6 @@ glyphs:
     uid: 9a3c22d82c4a4d9ea875a259b25b31e6
     search: [e054, collapsed]
   -
-    css: officeThreshold
-    code: 0xe055
-    uid: d3510460f6c94e428bb5c05f2496c666
-    search: [e055, office logo, threshold]
-  -
     css: office365
     code: 0xe056
     uid: 613212b0ab0a4bbebae1e14b10cbb848
